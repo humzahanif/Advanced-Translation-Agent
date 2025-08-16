@@ -477,16 +477,16 @@ def main():
                             display_translation_result(result, "standard", target_lang, translator)
                             
                             # Add audio playback option
-                            st.markdown("### 🔊 Audio Playback")
-                            if st.button("🔊 Generate Audio", key=f"play_standard_{hash(result)}"):
-                                with st.spinner("Generating audio..."):
-                                    audio_data = translator.text_to_speech(result, target_lang)
-                                    if audio_data:
-                                        create_audio_player(audio_data)
-                                        create_download_link(audio_data, f"translation_{datetime.now().strftime('%Y%m%d_%H%M%S')}.mp3")
-                                        st.success("🔊 Audio generated successfully!")
-                                    else:
-                                        st.error("Failed to generate audio")
+                           # st.markdown("### 🔊 Audio Playback")
+                            #if st.button("🔊 Generate Audio", key=f"play_standard_{hash(result)}"):
+                             #   with st.spinner("Generating audio..."):
+                              #      audio_data = translator.text_to_speech(result, target_lang)
+                               #     if audio_data:
+                                #        create_audio_player(audio_data)
+                                 #       create_download_link(audio_data, f"translation_{datetime.now().strftime('%Y%m%d_%H%M%S')}.mp3")
+                                  #      st.success("🔊 Audio generated successfully!")
+                                   # else:
+                                    #    st.error("Failed to generate audio")
                             
                             # Copy area
                             st.text_area("📋 Copy Translation:", value=result, height=80, key="copy_standard")
@@ -562,3 +562,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
