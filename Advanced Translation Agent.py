@@ -223,7 +223,7 @@ def main():
     st.markdown("""
     <style>
     .stTextArea textarea {
-        background-color: #0a0a0a;
+        background-color: #fafdff;
         border: 2px solid #e9ecef;
         border-radius: 8px;
     }
@@ -232,7 +232,7 @@ def main():
         box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
     }
     .stSelectbox > div > div {
-        background-color: #0a0a0a;
+        background-color: #fafdff;
         border-radius: 8px;
     }
     .audio-section {
@@ -560,4 +560,5 @@ def main():
     st.markdown("**✅ Fixed Audio Version** - All audio controls now working with native Streamlit audio player!")
 
 if __name__ == "__main__":
+
     main()
